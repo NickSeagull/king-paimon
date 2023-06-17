@@ -4,14 +4,14 @@ services:
     image: lscr.io/linuxserver/duplicati:latest
     container_name: duplicati
     environment:
-      - PUID=1000
-      - PGID=1000
-      - TZ=Etc/UTC
-      - CLI_ARGS= #optional
-        # volumes:
-        #   - /path/to/appdata/config:/config
-        #   - /path/to/backups:/backups
-        #   - /path/to/source:/source
+      - PUID=0   # Default is 1000, we use 0 to run as root
+      - PGID=0
+      - TZ=Atlantic/Canary
+    volumes:
+      - /home/nick/config/duplicati:/config
+        # - /path/to/backups:/backups  -- This line is necessary for backing up onto an external drive
+      - /home/nick/config:/source
+      - /data:/data
     ports:
       - 8200:8200
     restart: unless-stopped
