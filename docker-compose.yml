@@ -25,3 +25,25 @@ services:
     working_dir: /data
     command: ./startserver.sh
     restart: unless-stopped
+
+  code-server:
+    image: lscr.io/linuxserver/code-server:latest
+    container_name: code-server
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Atlantic/Canary
+      - FILE__PASSWORD=/home/nick/config/code-server/.pass
+        # - HASHED_PASSWORD= #optional
+        # - SUDO_PASSWORD=password #optional
+        # - SUDO_PASSWORD_HASH= #optional
+        # - PROXY_DOMAIN=code-server.my.domain #optional
+      - DEFAULT_WORKSPACE=/data
+    volumes:
+      - /home/nick/config/code-server:/config
+      - /home/nick/config:/root-config
+      - /data/code-server:/data
+    ports:
+      - 8443:8443
+    restart: unless-stopped
+
