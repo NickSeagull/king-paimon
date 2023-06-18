@@ -1,23 +1,5 @@
 { services =
-  { code-server =
-    { container_name = "code-server"
-    , environment =
-      [ "PUID=1000"
-      , "PGID=1000"
-      , "TZ=Atlantic/Canary"
-      , "PASSWORD=CHANGEME"
-      , "SUDO_PASSWORD=CHANGEME"
-      , "DEFAULT_WORKSPACE=/data"
-      ]
-    , image = "lscr.io/linuxserver/code-server:latest"
-    , ports = [ "8443:8443" ]
-    , restart = "unless-stopped"
-    , volumes =
-      [ "/home/nick/config/code-server:/config"
-      , "/home/nick/config:/root-config"
-      , "/data/code-server:/data"
-      ]
-    }
+  { code-server = ./src/code-server.dhall
   , duplicati =
     { container_name = "duplicati"
     , environment = [ "PUID=0", "PGID=0", "TZ=Atlantic/Canary" ]

@@ -4,3 +4,6 @@ minecraft/aqm2_server_files
 .*pass
 
 .history
+secrets.dhall
+docker-compose.yml
+docker-compose.yaml
