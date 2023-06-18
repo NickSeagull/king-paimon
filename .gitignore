@@ -2,3 +2,5 @@ duplicati/
 code-server/
 minecraft/aqm2_server_files
 .*pass
+
+.history

@@ -33,9 +33,9 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=Atlantic/Canary
-      - FILE__PASSWORD=/home/nick/config/code-server/.pass
+      - PASSWORD=CHANGEME
         # - HASHED_PASSWORD= #optional
-        # - SUDO_PASSWORD=password #optional
+      - SUDO_PASSWORD=CHANGEME
         # - SUDO_PASSWORD_HASH= #optional
         # - PROXY_DOMAIN=code-server.my.domain #optional
       - DEFAULT_WORKSPACE=/data
