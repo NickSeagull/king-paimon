@@ -15,3 +15,13 @@ services:
     ports:
       - 8200:8200
     restart: unless-stopped
+  minecraft:
+    image: openjdk:17
+    container_name: minecraft
+    ports:
+      - 25565:25565
+    volumes:
+      - ./minecraft/aqm2_server_files:/data
+    working_dir: /data
+    command: ./startserver.sh
+    restart: unless-stopped
