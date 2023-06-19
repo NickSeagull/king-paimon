@@ -1,0 +1,1 @@
+{ onHost : Text, onGuest : Text }
