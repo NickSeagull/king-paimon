@@ -13,4 +13,5 @@
   , ddclient = ./src/ddclient.dhall
   }
 , version = "2.1"
+, networks.wireguard.name = "wireguard"
 }

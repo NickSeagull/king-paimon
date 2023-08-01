@@ -21,9 +21,8 @@ in      linuxserver
               { SERVERURL = "qliphoth.nickseagull.dev"
               , SERVERPORT = entryPort
               , PEERS = Text/concatSep "," peers
-              , PEERDNS = "192.168.86.1"
               }
-          , ports = [ { onHost = entryPort, onGuest = entryPort } ]
+          , ports = [ { onHost = entryPort, onGuest = entryPort ++ "/udp" } ]
           , volumes =
             [ { onHost = "/home/nick/config/wireguard", onGuest = "/config" }
             , { onHost = "/lib/modules", onGuest = "/lib/modules" }
@@ -33,4 +32,5 @@ in      linuxserver
           }
     /\  { cap_add = [ "NET_ADMIN", "SYS_MODULE" ]
         , sysctls.`net.ipv4.conf.all.src_valid_mark` = 1
+        , networks = [ "wireguard" ]
         }
