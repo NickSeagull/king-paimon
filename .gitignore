@@ -8,6 +8,8 @@ zigbee2mqtt/
 nodered/
 nextcloud/
 mariadb/
+wireguard/
+ddclient/
 .*pass
 
 .history

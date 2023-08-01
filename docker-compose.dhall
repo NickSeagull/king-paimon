@@ -9,6 +9,8 @@
   , nodered = ./src/nodered.dhall
   , nextcloud = ./src/nextcloud.dhall
   , mariadb = ./src/mariadb.dhall
+  , wireguard = ./src/wireguard.dhall
+  , ddclient = ./src/ddclient.dhall
   }
 , version = "2.1"
 }
