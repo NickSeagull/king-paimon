@@ -11,6 +11,7 @@
   , mariadb = ./src/mariadb.dhall
   , wireguard = ./src/wireguard.dhall
   , ddclient = ./src/ddclient.dhall
+  , znc = ./src/znc.dhall
   }
 , version = "2.1"
 , networks.wireguard.name = "wireguard"

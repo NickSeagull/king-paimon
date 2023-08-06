@@ -13,6 +13,7 @@ let peers =
       , "ipadosi"
       , "macbookosi"
       , "macbookgati"
+      , "thinkpad"
       ]
 
 in      linuxserver
