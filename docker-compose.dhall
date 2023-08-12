@@ -1,7 +1,6 @@
 { services =
   { code-server = ./src/code-server.dhall
   , duplicati = ./src/duplicati.dhall
-  , minecraft = ./src/minecraft.dhall
   , portainer = ./src/portainer.dhall
   , mosquitto = ./src/mosquitto.dhall
   , homeassistant = ./src/homeassistant.dhall
@@ -11,7 +10,6 @@
   , mariadb = ./src/mariadb.dhall
   , wireguard = ./src/wireguard.dhall
   , ddclient = ./src/ddclient.dhall
-  , znc = ./src/znc.dhall
   }
 , version = "2.1"
 , networks.wireguard.name = "wireguard"
