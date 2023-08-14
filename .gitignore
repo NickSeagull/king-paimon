@@ -8,9 +8,13 @@ zigbee2mqtt/
 nodered/
 nextcloud/
 mariadb/
+mariadb-gitea/
+gitea/
+gitea-act-runner/
 wireguard/
 ddclient/
 .*pass
+dashy/
 
 .history
 secrets.dhall
