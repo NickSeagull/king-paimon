@@ -14,6 +14,7 @@
   , wireguard = ./src/wireguard.dhall
   , ddclient = ./src/ddclient.dhall
   , dashy = ./src/dashy.dhall
+  , chatbot-ui = ./src/chatbot-ui.dhall
   }
 , version = "2.1"
 , networks.wireguard.name = "wireguard"
