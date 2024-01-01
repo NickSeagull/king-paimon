@@ -8,12 +8,14 @@
   , nodered = ./src/nodered.dhall
   , nextcloud = ./src/nextcloud.dhall
   , mariadb = ./src/mariadb.dhall
+  , memgpt-db-test = ./src/memgpt-db.dhall
   , mariadb-gitea = ./src/mariadb-gitea.dhall
   , gitea = ./src/gitea.dhall
   , gitea-act-runner = ./src/gitea-act-runner.dhall
   , wireguard = ./src/wireguard.dhall
   , ddclient = ./src/ddclient.dhall
   , dashy = ./src/dashy.dhall
+  , n8n = ./src/n8n.dhall
   , chatbot-ui = ./src/chatbot-ui.dhall
   }
 , version = "2.1"
