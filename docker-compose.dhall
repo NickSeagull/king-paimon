@@ -9,6 +9,7 @@
   , nextcloud = ./src/nextcloud.dhall
   , mariadb = ./src/mariadb.dhall
   , memgpt-db-test = ./src/memgpt-db.dhall
+  , memgpt = ./src/memgpt.dhall
   , mariadb-gitea = ./src/mariadb-gitea.dhall
   , gitea = ./src/gitea.dhall
   , gitea-act-runner = ./src/gitea-act-runner.dhall
