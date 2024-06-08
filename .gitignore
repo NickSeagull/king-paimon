@@ -13,8 +13,11 @@ gitea/
 gitea-act-runner/
 wireguard/
 ddclient/
+n8n/
+traefik/
 .*pass
 dashy/
+danswer/
 
 .history
 secrets.dhall
@@ -24,3 +27,7 @@ build
 znc
 
 memgpt/
+yhlygh-mind/
+data/
+certs*
+typesense/

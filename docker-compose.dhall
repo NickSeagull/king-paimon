@@ -8,8 +8,6 @@
   , nodered = ./src/nodered.dhall
   , nextcloud = ./src/nextcloud.dhall
   , mariadb = ./src/mariadb.dhall
-  , memgpt-db-test = ./src/memgpt-db.dhall
-  , memgpt = ./src/memgpt.dhall
   , mariadb-gitea = ./src/mariadb-gitea.dhall
   , gitea = ./src/gitea.dhall
   , gitea-act-runner = ./src/gitea-act-runner.dhall
@@ -17,7 +15,10 @@
   , ddclient = ./src/ddclient.dhall
   , dashy = ./src/dashy.dhall
   , n8n = ./src/n8n.dhall
+  , traefik = ./src/traefik.dhall
+  , typesense = ./src/typesense.dhall
   , chatbot-ui = ./src/chatbot-ui.dhall
+  , yhlygh = ./src/yhlygh.dhall
   }
 , version = "2.1"
 , networks.wireguard.name = "wireguard"

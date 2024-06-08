@@ -1,21 +1,24 @@
 let secrets = ./secrets.dhall
 
 in  { container_name = "traefik"
-    , image = "docker.io/traefik:v2.6.1"
-    , restart = "unless-stopped"
+    , image = "traefik"
+    , restart = "always"
     , command =
-      [ "--api.insecure=false"
+      [ "--api=true"
+      , "--api.insecure=true"
       , "--providers.docker=true"
       , "--providers.docker.exposedbydefault=false"
-      , "--entrypoints.http.address=:${secrets.rocketchat.port}"
+      , "--providers.file.filename=/etc/traefik/dynamic/certs-config.yaml"
+      , "--entrypoints.web.address=:80"
+      , "--entrypoints.web.http.redirections.entryPoint.to=websecure"
+      , "--entrypoints.web.http.redirections.entrypoint.scheme=https"
+      , "--entrypoints.websecure.address=:443"
       ]
-    , ports =
-      [ "${secrets.rocketchat.port}:3000"
-      , "${secrets.traefik.dashboardPort}:8080"
-      ]
+    , ports = [ "80:80", "443:443" ]
     , volumes =
       [ "./data/letsencrypt:/letsencrypt:rw"
       , "/var/run/docker.sock:/var/run/docker.sock:ro"
+      , "./certs-config.yaml:/etc/traefik/dynamic/certs-config.yaml:ro"
+      , "./certs:/etc/certs:ro"
       ]
-    , depends_on = [ "mongodb", "rocketchat" ]
     }
