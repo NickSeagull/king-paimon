@@ -18,7 +18,9 @@
   , traefik = ./src/traefik.dhall
   , typesense = ./src/typesense.dhall
   , chatbot-ui = ./src/chatbot-ui.dhall
-  , yhlygh = ./src/yhlygh.dhall
+  -- , yhlygh = ./src/yhlygh.dhall
+  , valkey = ./src/valkey.dhall
+  , actual-budget = ./src/actual-budget.dhall
   }
 , version = "2.1"
 , networks.wireguard.name = "wireguard"

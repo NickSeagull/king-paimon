@@ -1,7 +1,7 @@
 let secrets = ./secrets.dhall
 
 in  { container_name = "n8n"
-    , image = "docker.n8n.io/n8nio/n8n:latest"
+    , image = "n8n"
     , restart = "always"
     , ports = [ "127.0.0.1:5678:5678" ]
     , labels =
@@ -29,4 +29,5 @@ in  { container_name = "n8n"
       , GENERIC_TIMEZONE = "Atlantic/Canary"
       }
     , volumes = [ "./n8n:/home/node/.n8n" ]
+    , depends_on = [ "valkey" ]
     }

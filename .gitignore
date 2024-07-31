@@ -31,3 +31,5 @@ yhlygh-mind/
 data/
 certs*
 typesense/
+valkey/
+actual-budget/
