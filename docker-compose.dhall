@@ -7,6 +7,7 @@
   , zigbee2mqtt = ./src/zigbee2mqtt.dhall
   , nodered = ./src/nodered.dhall
   , nextcloud = ./src/nextcloud.dhall
+  , dokuwiki = ./src/dokuwiki.dhall
   , mariadb = ./src/mariadb.dhall
   , mariadb-gitea = ./src/mariadb-gitea.dhall
   , gitea = ./src/gitea.dhall
@@ -18,7 +19,6 @@
   , traefik = ./src/traefik.dhall
   , typesense = ./src/typesense.dhall
   , chatbot-ui = ./src/chatbot-ui.dhall
-  -- , yhlygh = ./src/yhlygh.dhall
   , valkey = ./src/valkey.dhall
   , actual-budget = ./src/actual-budget.dhall
   }

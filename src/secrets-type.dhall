@@ -11,11 +11,8 @@
   , rocketchat : { port : Text, host : Text }
   , traefik : { dashboardPort : Text }
   , nextcloud : { host : Text, domainName : Text }
+  , dokuwiki : { host : Text, domainName : Text }
   , n8n : { webhookUrl : Text, host : Text, domainName : Text, sslEmail : Text }
-      , actual-budget : {
-        host : Text,
-        domainName : Text,
-        sslEmail : Text
-        }
+  , actual-budget : { host : Text, domainName : Text, sslEmail : Text }
   }
 : Type
