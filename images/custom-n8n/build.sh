@@ -1,5 +1,5 @@
 # build container
-docker build -f images/n8n/Dockerfile -t n8n .
+docker build -f images/custom-n8n/Dockerfile -t n8n .
 
 # run container
 # docker run -d --rm \

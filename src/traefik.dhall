@@ -6,6 +6,7 @@ in  { container_name = "traefik"
     , command =
       [ "--api=true"
       , "--api.insecure=true"
+      , "--log.level=DEBUG"
       , "--providers.docker=true"
       , "--providers.docker.exposedbydefault=false"
       , "--providers.file.filename=/etc/traefik/dynamic/certs-config.yaml"

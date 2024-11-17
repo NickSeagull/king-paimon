@@ -1,7 +1,5 @@
 { services =
-  { code-server = ./src/code-server.dhall
-  , duplicati = ./src/duplicati.dhall
-  , portainer = ./src/portainer.dhall
+  { duplicati = ./src/duplicati.dhall
   , mosquitto = ./src/mosquitto.dhall
   , homeassistant = ./src/homeassistant.dhall
   , zigbee2mqtt = ./src/zigbee2mqtt.dhall
@@ -17,8 +15,6 @@
   , dashy = ./src/dashy.dhall
   , n8n = ./src/n8n.dhall
   , traefik = ./src/traefik.dhall
-  , typesense = ./src/typesense.dhall
-  , chatbot-ui = ./src/chatbot-ui.dhall
   , valkey = ./src/valkey.dhall
   , actual-budget = ./src/actual-budget.dhall
   }

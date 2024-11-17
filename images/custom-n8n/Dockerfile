@@ -27,7 +27,7 @@ RUN set -eux; \
 
 ENV N8N_LOG_LEVEL=debug
 
-COPY images/n8n/docker-entrypoint.sh /
+COPY images/custom-n8n/docker-entrypoint.sh /
 
 RUN \
 	mkdir .n8n && \
