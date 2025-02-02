@@ -2,7 +2,7 @@
 , image = "yhlygh:latest"
 , restart = "unless-stopped"
 , volumes =
-  [ "/home/nick/config/yhlygh-mind:/app"
+  [ "/home/nick/config/appdata/yhlygh-mind:/app"
   , "/mnt/nextcloud/1 Projects/YhLygh:/yhlygh"
   ]
 , environment = { PUID = "1000", PGID = "1000" }

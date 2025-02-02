@@ -6,6 +6,8 @@ in  { container_name = "portainer"
     , restart = "always"
     , environment.TZ = "Atlantic/Canary"
     , volumes =
-      [ "./portainer:/data", "/var/run/docker.sock:/var/run/docker.sock" ]
+      [ "./appdata/portainer:/data"
+      , "/var/run/docker.sock:/var/run/docker.sock"
+      ]
     , working_dir = "/data"
     }

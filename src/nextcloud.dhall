@@ -9,7 +9,9 @@ in      linuxserver
           , env = Map/empty Text Text
           , ports = [ { onHost = "8243", onGuest = "443" } ]
           , volumes =
-            [ { onHost = "/home/nick/config/nextcloud", onGuest = "/config" }
+            [ { onHost = "/home/nick/config/appdata/nextcloud"
+              , onGuest = "/config"
+              }
             , { onHost = "/data", onGuest = "/data" }
             ]
           , puid = None Natural

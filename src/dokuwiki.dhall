@@ -12,7 +12,10 @@ in      linuxserver
             , { onHost = "8380", onGuest = "80" }
             ]
           , volumes =
-            [ { onHost = "/home/nick/config/dokuwiki", onGuest = "/config" } ]
+            [ { onHost = "/home/nick/config/appdata/dokuwiki"
+              , onGuest = "/config"
+              }
+            ]
           , puid = None Natural
           , pgid = None Natural
           }

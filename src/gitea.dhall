@@ -6,7 +6,7 @@ in  { container_name = "gitea"
     , image = "gitea/gitea:latest"
     , restart = "unless-stopped"
     , volumes =
-      [ "./gitea:/data"
+      [ "./appdata/gitea:/data"
       , "/etc/timezone:/etc/timezone:ro"
       , "/etc/localtime:/etc/localtime:ro"
       ]

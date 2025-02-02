@@ -17,8 +17,10 @@ let c =
             }
         , ports = [] : List { onGuest : Text, onHost : Text }
         , volumes =
-          [ { onHost = "/home/nick/config/mariadb-gitea", onGuest = "/config" }
-          , { onHost = "/home/nick/config/mariadb-gitea/data"
+          [ { onHost = "/home/nick/config/appdata/mariadb-gitea"
+            , onGuest = "/config"
+            }
+          , { onHost = "/home/nick/config/appdata/mariadb-gitea/data"
             , onGuest = "/data"
             }
           ]

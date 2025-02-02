@@ -11,7 +11,8 @@ in  linuxserver
       , env = Map/empty Text Text
       , ports = emptyPorts
       , volumes =
-        [ { onHost = "/home/nick/config/ddclient", onGuest = "/config" } ]
+        [ { onHost = "/home/nick/config/appdata/ddclient", onGuest = "/config" }
+        ]
       , puid = None Natural
       , pgid = None Natural
       }

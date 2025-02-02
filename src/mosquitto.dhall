@@ -6,9 +6,9 @@ in  { build.context = "."
     , ports = [ "1883:1883", "9001:9001" ]
     , restart = "unless-stopped"
     , volumes =
-      [ "./mosquitto:/mosquitto"
-      , "./mosquitto/data:/mosquitto/data"
-      , "../.mosquitto-logs:/mosquitto/log"
+      [ "./appdata/mosquitto:/mosquitto"
+      , "./appdata/mosquitto/data:/mosquitto/data"
+      , "../appdata/mosquitto/.mosquitto-logs:/mosquitto/log"
       ]
     , working_dir = "/data"
     }

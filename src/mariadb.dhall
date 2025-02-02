@@ -14,7 +14,7 @@ in  linuxserver
           }
       , ports = [] : List { onGuest : Text, onHost : Text }
       , volumes =
-        [ { onHost = "/home/nick/config/mariadb", onGuest = "/config" }
+        [ { onHost = "/home/nick/config/appdata/mariadb", onGuest = "/config" }
         , { onHost = "/data", onGuest = "/data" }
         ]
       , puid = None Natural

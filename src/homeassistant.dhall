@@ -5,7 +5,9 @@ in      { container_name = "homeassistant"
         , restart = "unless-stopped"
         , privileged = True
         , volumes =
-          [ "./homeassistant:/config", "/etc/localtime:/etc/localtime:ro" ]
+          [ "./appdata/homeassistant:/config"
+          , "/etc/localtime:/etc/localtime:ro"
+          ]
         , network_mode = "host"
         }
     /\  { depends_on = [ "mosquitto" ] }

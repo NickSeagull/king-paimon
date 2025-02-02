@@ -6,7 +6,8 @@ in  linuxserver
       { name = "znc"
       , env = Map/empty Text Text
       , ports = [ { onHost = "6501", onGuest = "6501" } ]
-      , volumes = [ { onHost = "/home/nick/config/znc", onGuest = "/config" } ]
+      , volumes =
+        [ { onHost = "/home/nick/config/appdata/znc", onGuest = "/config" } ]
       , puid = None Natural
       , pgid = None Natural
       }

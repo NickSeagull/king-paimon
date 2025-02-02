@@ -28,6 +28,6 @@ in  { container_name = "n8n"
       , WEBHOOK_URL = secrets.n8n.webhookUrl
       , GENERIC_TIMEZONE = "Atlantic/Canary"
       }
-    , volumes = [ "./n8n:/home/node/.n8n" ]
+    , volumes = [ "./appdata/n8n:/home/node/.n8n" ]
     , depends_on = [ "valkey" ]
     }

@@ -3,7 +3,8 @@ let secrets = ./secrets.dhall
 in      { container_name = "zigbee2mqtt"
         , image = "koenkk/zigbee2mqtt"
         , restart = "unless-stopped"
-        , volumes = [ "./zigbee2mqtt:/app/data", "/run/udev:/run/udev:ro" ]
+        , volumes =
+          [ "./appdata/zigbee2mqtt:/app/data", "/run/udev:/run/udev:ro" ]
         , ports = [ "8999:8080" ]
         , environment = [ "TZ=Atlantic/Canary" ]
         , devices =

@@ -11,7 +11,6 @@
   , mariadb-gitea = ./src/mariadb-gitea.dhall
   , gitea = ./src/gitea.dhall
   , gitea-act-runner = ./src/gitea-act-runner.dhall
-  , wireguard = ./src/wireguard.dhall
   , ddclient = ./src/ddclient.dhall
   , n8n = ./src/n8n.dhall
   , traefik = ./src/traefik.dhall

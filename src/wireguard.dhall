@@ -25,7 +25,9 @@ in      linuxserver
               }
           , ports = [ { onHost = entryPort, onGuest = entryPort ++ "/udp" } ]
           , volumes =
-            [ { onHost = "/home/nick/config/wireguard", onGuest = "/config" }
+            [ { onHost = "/home/nick/config/appdata/wireguard"
+              , onGuest = "/config"
+              }
             , { onHost = "/lib/modules", onGuest = "/lib/modules" }
             ]
           , puid = None Natural

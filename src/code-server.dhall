@@ -11,7 +11,9 @@ in  linuxserver
           }
       , ports = [ { onHost = "8443", onGuest = "8443" } ]
       , volumes =
-        [ { onHost = "/home/nick/config/code-server", onGuest = "/config" }
+        [ { onHost = "/home/nick/config/appdata/code-server"
+          , onGuest = "/config"
+          }
         , { onHost = "/home/nick/config", onGuest = "/root-config" }
         , { onHost = "/data/code-server", onGuest = "/data" }
         ]

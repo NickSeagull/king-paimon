@@ -7,7 +7,7 @@ in  { container_name = "gitea-act-runner"
     , restart = "always"
     , volumes =
       [ "/var/run/docker.sock:/var/run/docker.sock"
-      , "./gitea-act-runner:/data"
+      , "./appdata/gitea-act-runner:/data"
       ]
     , depends_on = [ "gitea" ]
     , environment =
