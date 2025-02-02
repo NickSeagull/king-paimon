@@ -1,7 +1,6 @@
 { services =
   { duplicati = ./src/duplicati.dhall
   , mosquitto = ./src/mosquitto.dhall
-  , chatbot-ui = ./src/chatbot-ui.dhall
   , homeassistant = ./src/homeassistant.dhall
   , zigbee2mqtt = ./src/zigbee2mqtt.dhall
   , nodered = ./src/nodered.dhall
@@ -17,7 +16,6 @@
   , valkey = ./src/valkey.dhall
   , actual-budget = ./src/actual-budget.dhall
   }
-, version = "2.1"
 , networks.wireguard.name = "wireguard"
 , networks.gitea.external = False
 }
