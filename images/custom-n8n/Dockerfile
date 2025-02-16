@@ -4,7 +4,7 @@ FROM n8nio/base:${NODE_VERSION}
 USER root
 RUN apk update && apk add ffmpeg
 
-ARG N8N_VERSION=1.51.1
+ARG N8N_VERSION=1.78.1
 RUN if [ -z "$N8N_VERSION" ] ; then echo "The N8N_VERSION argument is missing!" ; exit 1; fi
 
 LABEL org.opencontainers.image.title="n8n"
