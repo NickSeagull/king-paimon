@@ -1,16 +1,24 @@
 let linuxserver = ./utils/linuxserver.dhall
 
+let secrets = ./secrets.dhall
+
 let Map/empty = https://prelude.dhall-lang.org/Map/empty.dhall
 
 in  linuxserver
       { name = "duplicati"
-      , env = Map/empty Text Text
+      , env = toMap {
+        PUID = "1000",
+        PGID = "1000",
+        TZ = "Atlantic/Canary",
+        SETTINGS_ENCRYPTION_KEY = secrets.duplicati.encryptionKey,
+        DUPLICATI__WEBSERVICE_PASSWORD = secrets.duplicati.password,
+      }
       , ports = [ { onHost = "8200", onGuest = "8200" } ]
       , volumes =
-        [ { onHost = "/home/nick/config/appdata/duplicati"
+        [ { onHost = "/data/volumes/duplicati/config"
           , onGuest = "/config"
           }
-        , { onHost = "/home/nick/config", onGuest = "/source" }
+        , { onHost = ".", onGuest = "/source" }
         , { onHost = "/data", onGuest = "/data" }
         ]
       , puid = Some 0

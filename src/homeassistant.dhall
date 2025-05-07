@@ -5,9 +5,13 @@ in      { container_name = "homeassistant"
         , restart = "unless-stopped"
         , privileged = True
         , volumes =
-          [ "./appdata/homeassistant:/config"
+          [ "/data/volumes/homeassistant/config:/config"
           , "/etc/localtime:/etc/localtime:ro"
           ]
         , network_mode = "host"
+        , environment = [
+          "PUID=1000",
+          "PGID=1000" 
+        ]
         }
-    /\  { depends_on = [ "mosquitto" ] }
+    /\  { depends_on = [ "mosquitto", "zigbee2mqtt" ] }

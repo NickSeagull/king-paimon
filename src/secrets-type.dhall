@@ -1,4 +1,5 @@
   { code-server : { password : Text, sudoPassword : Text }
+  , duplicati : { encryptionKey : Text, password : Text }
   , gitea-runner : { registrationToken : Text, instanceUrl : Text }
   , openai-api-key : Text
   , mariadb :
