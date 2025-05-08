@@ -5,4 +5,4 @@
   , zigbee2mqtt = ./src/zigbee2mqtt.dhall
   , nodered = ./src/nodered.dhall
   }
-}
+} /\ ./src/auth/services.dhall
