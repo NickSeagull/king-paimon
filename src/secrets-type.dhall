@@ -6,14 +6,24 @@
       { database : Text, user : Text, password : Text, rootPassword : Text }
   , mariadb-gitea :
       { database : Text, user : Text, password : Text, rootPassword : Text }
-  , authelia :
-      { jwt : Text, session : Text, storagePassword : Text, encryptionKey : Text ,
-      host : Text, domainName : Text, sslEmail : Text }
+  , authentik :
+      { pgUser : Text
+      , pgPassword : Text
+      , pgDb : Text
+      , secretKey : Text
+      , domain : Text
+      }
   , mongodb : { username : Text, password : Text }
   , memgpt-db : { password : Text }
   , memgpt : { openaiApiKey : Text }
   , rocketchat : { port : Text, host : Text }
-  , traefik : { dashboardPort : Text, sslEmail : Text, publicHost : Text, secureHost : Text }
+  , cloudflare : { apiEmail : Text, apiKey : Text }
+  , traefik :
+      { dashboardPort : Text
+      , sslEmail : Text
+      , publicHost : Text
+      , secureHost : Text
+      }
   , nextcloud : { host : Text, domainName : Text }
   , syncthing : { host : Text, domainName : Text }
   , dokuwiki : { host : Text, domainName : Text }

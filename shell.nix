@@ -23,5 +23,6 @@ pkgs.mkShell rec {
   buildInputs = with pkgs; [
     dhall
     dhall-json
+    dhall-lsp-server
   ];
 }
