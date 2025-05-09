@@ -17,6 +17,7 @@ in  { container_name = "authentikWorker"
       , "AUTHENTIK_POSTGRESQL__PASSWORD=${secrets.authentik.pgPassword}"
       ]
     , user = "root"
+    , networks = [ "proxy" ]
     , volumes =
       [ "/var/run/docker.sock:/var/run/docker.sock"
       , "/data/volumes/authentik/media:/media"

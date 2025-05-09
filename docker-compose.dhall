@@ -6,5 +6,8 @@
       , nodered = ./src/nodered.dhall
       , ddclient = ./src/ddclient.dhall
       }
+    , networks =
+      { proxy = { name = "proxy" }
+      }
     }
 /\  ./src/auth/services.dhall

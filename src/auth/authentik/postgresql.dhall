@@ -8,6 +8,7 @@ in { container_name = "authentikPostgresql"
   , "POSTGRES_USER=${secrets.authentik.pgUser}"
   , "POSTGRES_DB=${secrets.authentik.pgDb}"
   ]
+, networks = [ "proxy" ]
 , healthcheck =
   { test = [ "CMD", "pg_isready", "-d", "${secrets.authentik.pgDb}", "-U", "${secrets.authentik.pgUser}" ]
   , interval = "10s"

@@ -22,6 +22,7 @@ in  { container_name = "authentikServer"
       [ "/data/volumes/authentik/media:/media"
       , "/data/volumes/authentik/custom-templates:/templates"
       ]
+    , networks = [ "proxy" ]
     , labels =
       [ "traefik.enable=true"
       , "traefik.http.routers.authentik.rule=Host(`${secrets.authentik.domain}`)"
