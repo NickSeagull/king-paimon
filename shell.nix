@@ -24,5 +24,7 @@ pkgs.mkShell rec {
     dhall
     dhall-json
     dhall-lsp-server
+    haskell-language-server
+    nixfmt-classic
   ];
 }

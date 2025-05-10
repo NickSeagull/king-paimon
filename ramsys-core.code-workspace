@@ -7,5 +7,7 @@
 			"path": "/data"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"nixEnvSelector.nixFile": "${workspaceFolder}/shell.nix"
+	}
 }

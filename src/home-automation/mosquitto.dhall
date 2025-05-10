@@ -1,4 +1,4 @@
-let secrets = ./secrets.dhall
+let secrets = ../secrets.dhall
 
 in  { build.context = "."
     , container_name = "mosquitto"

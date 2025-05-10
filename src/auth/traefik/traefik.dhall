@@ -25,19 +25,7 @@ in  { container_name = "traefik"
       , "--log.level=DEBUG"
       ]
     , networks = [ "proxy" ]
-      {-- 
-      [ "--api=true"
-      , "--api.insecure=true"
-      , "--log.level=DEBUG"
-      , "--providers.docker=true"
-      , "--providers.docker.exposedbydefault=false"
-      , "--providers.file.filename=/etc/traefik/dynamic/certs-config.yaml"
-      , "--entrypoints.web.address=:80"
-      , "--entrypoints.web.http.redirections.entryPoint.to=websecure"
-      , "--entrypoints.web.http.redirections.entrypoint.scheme=https"
-      , "--entrypoints.websecure.address=:443"
-      ]
-      --}
+      
     , environment =
       [ "CF_DNS_API_TOKEN=${secrets.cloudflare.apiKey}"
       , "CF_API_EMAIL=${secrets.cloudflare.apiEmail}"

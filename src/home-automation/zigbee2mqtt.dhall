@@ -1,4 +1,4 @@
-let secrets = ./secrets.dhall
+let secrets = ../secrets.dhall
 
 in      { container_name = "zigbee2mqtt"
         , image = "koenkk/zigbee2mqtt"

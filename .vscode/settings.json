@@ -1,3 +1,7 @@
 {
-  "cSpell.words": ["pgid", "puid"],
+  "cSpell.words": [
+    "pgid",
+    "puid"
+  ],
+  "nixEnvSelector.nixFile": "${workspaceFolder}/shell.nix",
 }
