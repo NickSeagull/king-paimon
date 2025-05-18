@@ -11,3 +11,4 @@
       }
     }
 /\  ./src/auth/services.dhall
+/\  ./src/games/services.dhall
