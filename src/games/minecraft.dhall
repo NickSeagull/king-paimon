@@ -14,6 +14,7 @@ in  {
   -- , "CF_FORCE_SYNCHRONIZE=true"
   , "FABRIC_LOADER_VERSION=0.16.5"
   , "VERSION=1.20.1"
+  , "DIFFICULTY=normal"
   , "DISABLE_HEALTHCHECK=true"
   , "MEMORY=24G"
   , "INIT_MEMORY=24G"
