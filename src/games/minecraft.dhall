@@ -9,7 +9,7 @@ in  {
   , "DEBUG=TRUE"
   , "CF_API_KEY=${secrets.minecraft.cfApiKey}"
   , "CF_PAGE_URL=https://www.curseforge.com/minecraft/modpacks/prominence-2-rpg"
-  , "CF_FILENAME_MATCHER=3.1.11"
+  , "CF_FILENAME_MATCHER=3.1.20"
   , "CF_FORCE_INCLUDE_MODS=modmenu,luna,fancymenu,dynmapforge"
   -- , "CF_FORCE_SYNCHRONIZE=true"
   , "FABRIC_LOADER_VERSION=0.16.5"
