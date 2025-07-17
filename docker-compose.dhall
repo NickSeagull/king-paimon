@@ -5,10 +5,11 @@
       , zigbee2mqtt = ./src/zigbee2mqtt.dhall
       , nodered = ./src/nodered.dhall
       , ddclient = ./src/ddclient.dhall
+      , code-server = ./src/code-server.dhall
       }
     , networks =
       { proxy = { name = "proxy" }
       }
     }
 /\  ./src/auth/services.dhall
-/\  ./src/games/services.dhall
+-- /\  ./src/games/services.dhall

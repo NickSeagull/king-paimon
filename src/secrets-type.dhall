@@ -1,4 +1,4 @@
-  { code-server : { password : Text, sudoPassword : Text }
+  { code-server : { password : Text, sudoPassword : Text, host : Text, domainName : Text }
   , duplicati : { encryptionKey : Text, password : Text }
   , gitea-runner : { registrationToken : Text, instanceUrl : Text }
   , openai-api-key : Text

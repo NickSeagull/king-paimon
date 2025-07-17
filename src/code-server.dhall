@@ -1,22 +1,29 @@
 let secrets = ./secrets.dhall
 
-let linuxserver = ./utils/linuxserver.dhall
-
-in  linuxserver
-      { name = "code-server"
-      , env = toMap
-          { PASSWORD = secrets.code-server.password
-          , SUDO_PASSWORD = secrets.code-server.sudoPassword
-          , DEFAULT_WORKSPACE = "/data"
-          }
-      , ports = [ { onHost = "8443", onGuest = "8443" } ]
+in 
+      { container_name = "code-server"
+      , image = "linuxserver/code-server:latest"
+      , restart = "unless-stopped"
+      , environment = [ "PASSWORD=${secrets.code-server.password}"
+      , "SUDO_PASSWORD=${secrets.code-server.sudoPassword}"
+      , "DEFAULT_WORKSPACE=/data"
+      , "PUID=1000"
+      , "PGID=1000"
+      , "TZ=Atlantic/Canary"
+      ]
+      , ports = [ "8443:8443" ]
       , volumes =
-        [ { onHost = "/home/nick/config/appdata/code-server"
-          , onGuest = "/config"
-          }
-        , { onHost = "/home/nick/config", onGuest = "/root-config" }
-        , { onHost = "/data/code-server", onGuest = "/data" }
+        [ "/home/nick/config/appdata/code-server:/config"
+        , "/home/nick/config:/root-config"
+        , "/data/code-server:/data"
         ]
-      , puid = None Natural
-      , pgid = None Natural
+      , networks = [ "proxy" ]
+      , labels =
+        [ "traefik.enable=true"
+        , "traefik.http.routers.code-server.rule=Host(`${secrets.code-server.host}`)"
+        , "traefik.http.routers.code-server.entrypoints=websecure"
+        , "traefik.http.routers.code-server.tls.certresolver=letsencrypt"
+        , "traefik.http.services.code-server.loadbalancer.server.port=8443"
+        , "traefik.http.routers.code-server.service=code-server"
+        ]
       }
