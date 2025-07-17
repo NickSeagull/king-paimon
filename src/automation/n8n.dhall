@@ -22,6 +22,6 @@ in  { container_name = "n8n"
       , "GENERIC_TIMEZONE=Atlantic/Canary"
       , "N8N_LOG_LEVEL=info"
       ]
-    , volumes = [] : List Text
+    , volumes = [ "/data/volumes/n8n/data:/home/node/.n8n" ]
     , depends_on = [] : List Text
     }
