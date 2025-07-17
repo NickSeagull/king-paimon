@@ -12,4 +12,5 @@
       }
     }
 /\  ./src/auth/services.dhall
+/\  ./src/automation/services.dhall
 -- /\  ./src/games/services.dhall
