@@ -1,0 +1,3 @@
+{ services = {
+  syncthing = ./syncthing.dhall
+}}

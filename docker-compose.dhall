@@ -13,4 +13,5 @@
     }
 /\  ./src/auth/services.dhall
 /\  ./src/automation/services.dhall
+/\  ./src/networking/services.dhall
 -- /\  ./src/games/services.dhall
