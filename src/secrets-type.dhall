@@ -30,5 +30,16 @@
   , n8n : { webhookUrl : Text, host : Text, domainName : Text, sslEmail : Text }
   , actual-budget : { host : Text, domainName : Text, sslEmail : Text }
   , minecraft : { host : Text, rconPassword : Text, cfApiKey : Text, whitelist : Text, ops : Text }
+  , paperless :
+      { pgUser : Text
+      , pgPassword : Text
+      , pgDb : Text
+      , secretKey : Text
+      , adminUser : Text
+      , adminPassword : Text
+      , host : Text
+      , hostAI : Text
+      , domainName : Text
+      }
   }
 : Type
