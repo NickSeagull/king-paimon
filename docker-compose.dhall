@@ -15,4 +15,4 @@
 /\  ./src/automation/services.dhall
 /\  ./src/networking/services.dhall
 /\  ./src/paperless/services.dhall
--- /\  ./src/games/services.dhall
+/\  ./src/games/services.dhall
