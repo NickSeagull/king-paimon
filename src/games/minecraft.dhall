@@ -16,7 +16,7 @@ in  {
   -- , "CF_FORCE_SYNCHRONIZE=true"
   , "VERSION=1.21.9"
   -- , "FORGEVERSION=14.23.5.2860"
-  , "DIFFICULTY=hard"
+  , "DIFFICULTY=normal"
   , "DISABLE_HEALTHCHECK=true"
   , "MAX_MEMORY=24G"
   , "INIT_MEMORY=4G"
@@ -41,9 +41,10 @@ in  {
   , "SYNC_CHUNK_WRITES=false"
   , "RCON_PASSWORD=${secrets.minecraft.rconPassword}"
   , "WHITELIST=${secrets.minecraft.whitelist}"
-  , "SPIGET_RESOURCES=274,9089,51856"
+  , "MODRINTH_PROJECTS=veinminer,magnetic,gravelootz,waypoints,bluemap"
+  -- , "SPIGET_RESOURCES=18083,12083,274,74208,59773"
   ]
-, ports = [ "25565:25565", "25575:25575" ]
+, ports = [ "25565:25565", "25575:25575", "8100:8100" ]
 , restart = "unless-stopped"
 , volumes = [ "/data/volumes/minecraft/data:/data", "/data/volumes/minecraft/mods:/data/mods" ]
 , deploy = {
