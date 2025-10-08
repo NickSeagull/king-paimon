@@ -14,7 +14,7 @@ in  {
   -- , "CF_EXCLUDE_MODS=292899,254144"
   --, "CF_FORCE_INCLUDE_MODS=modmenu,luna,fancymenu,dynmapforge"
   -- , "CF_FORCE_SYNCHRONIZE=true"
-  , "VERSION=1.21.9"
+  , "VERSION=1.21.10"
   -- , "FORGEVERSION=14.23.5.2860"
   , "DIFFICULTY=normal"
   , "DISABLE_HEALTHCHECK=true"
