@@ -49,6 +49,8 @@
       , jwtSecret : Text
       , host : Text
       , domainName : Text
+      , oauthClientId : Text
+      , oauthClientSecret : Text
       }
   }
 : Type
