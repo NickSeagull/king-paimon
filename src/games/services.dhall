@@ -1,5 +1,6 @@
 { services =
-  { minecraft = ./minecraft.dhall
-  , necesse = ./necesse.dhall
+  -- minecraft = ./minecraft.dhall
+  {
+   necesse = ./necesse.dhall
   }
 }
