@@ -42,5 +42,13 @@
       , hostAI : Text
       , domainName : Text
       }
+  , postiz :
+      { pgUser : Text
+      , pgPassword : Text
+      , pgDb : Text
+      , jwtSecret : Text
+      , host : Text
+      , domainName : Text
+      }
   }
 : Type
