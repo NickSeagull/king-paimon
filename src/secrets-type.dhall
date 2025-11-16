@@ -51,6 +51,8 @@
       , domainName : Text
       , oauthClientId : Text
       , oauthClientSecret : Text
+      , linkedinClientId : Text
+      , linkedinClientSecret : Text
       }
   }
 : Type

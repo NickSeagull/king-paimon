@@ -34,6 +34,9 @@ in  { container_name = "postiz"
       , "POSTIZ_OAUTH_USERINFO_URL=https://${secrets.authentik.domain}/application/o/userinfo/"
       , "POSTIZ_OAUTH_CLIENT_ID=${secrets.postiz.oauthClientId}"
       , "POSTIZ_OAUTH_CLIENT_SECRET=${secrets.postiz.oauthClientSecret}"
+      -- LinkedIn
+      , "LINKEDIN_CLIENT_ID=${secrets.postiz.linkedinClientId}"
+      , "LINKEDIN_CLIENT_SECRET=${secrets.postiz.linkedinClientSecret}"
       -- Misc Settings
       , "API_LIMIT=30"
       , "NX_ADD_PLUGINS=false"
