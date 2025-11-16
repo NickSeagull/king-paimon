@@ -53,6 +53,11 @@
       , oauthClientSecret : Text
       , linkedinClientId : Text
       , linkedinClientSecret : Text
+      , cloudflareAccountId : Text
+      , cloudflareAccessKey : Text
+      , cloudflareSecretAccessKey : Text
+      , cloudflareBucketname : Text
+      , cloudflareBucketUrl : Text
       }
   }
 : Type
